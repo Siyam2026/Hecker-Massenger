@@ -39,7 +39,7 @@ import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import messageRoutes from './routes/messageRoutes.js';
 import groupRoutes from './routes/groupRoutes.js';
-import uploadRoutes from './routes/uploadRoutes.js';
+import uploadRoutes from './socket/uploadRoutes.js';
 import setupSocket from './socket/socketHandler.js';
 
 // ... existing code ...
