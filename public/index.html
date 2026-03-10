@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Messenger</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="hacker-theme">
+    <div class="app-container">
+        <header class="top-bar">
+            <div class="logo neon-text">HACKER_NET</div>
+            <div class="top-icons">
+                <button class="icon-btn" id="searchBtn" onclick="location.href='/search.html'"><i data-lucide="search"></i></button>
+                <button class="icon-btn" id="notifBtn"><i data-lucide="bell"></i></button>
+            </div>
+        </header>
+
+        <main class="main-content" id="friendList">
+            <!-- Friends will be loaded here -->
+            <div class="loading">SCANNING_NETWORK...</div>
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-item" onclick="location.href='/profile.html'"><i data-lucide="user"></i><br>PROFILE</div>
+            <div class="nav-item" onclick="location.href='/index.html'"><i data-lucide="home"></i><br>HOME</div>
+            <div class="nav-item" onclick="location.href='/notifications.html'"><i data-lucide="bell"></i><br>NOTIFS</div>
+            <div class="nav-item" onclick="logout()"><i data-lucide="log-out"></i><br>LOGOUT</div>
+        </nav>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/main.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

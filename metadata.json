@@ -1,0 +1,5 @@
+{
+  "name": "Hacker Messenger",
+  "description": "A production-ready real-time Messenger-style web application with a hacker-style dark UI, featuring real-time messaging, group chats, file sharing, and audio calls.",
+  "requestFramePermissions": ["microphone"]
+}

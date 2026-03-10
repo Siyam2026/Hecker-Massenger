@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Messenger - Register</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="hacker-theme">
+    <div class="auth-container">
+        <h1 class="neon-text">CREATE_IDENTITY</h1>
+        <form id="registerForm" class="auth-form">
+            <div class="input-group">
+                <label for="regName">DISPLAY_NAME</label>
+                <input type="text" id="regName" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <label for="regUsername">USER_ID</label>
+                <input type="text" id="regUsername" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <label for="regPassword">ACCESS_CODE</label>
+                <input type="password" id="regPassword" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <label for="regProfilePic">AVATAR_URL</label>
+                <input type="text" id="regProfilePic" placeholder="Profile Picture URL (Optional)">
+            </div>
+            <button type="submit" class="neon-btn">ENCRYPT_IDENTITY</button>
+            <p class="auth-switch">Already have access? <a href="/login.html">LOGIN_SESSION</a></p>
+        </form>
+    </div>
+    <script src="/js/auth.js"></script>
+</body>
+</html>

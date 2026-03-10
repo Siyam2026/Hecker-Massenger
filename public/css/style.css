@@ -1,0 +1,266 @@
+:root {
+    --bg-color: #050505;
+    --neon-green: #00ff41;
+    --neon-green-dim: rgba(0, 255, 65, 0.2);
+    --text-color: #00ff41;
+    --error-color: #ff003c;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body.hacker-theme {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.auth-form {
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--neon-green);
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px var(--neon-green-dim);
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.input-group input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 10px;
+    font-family: var(--font-mono);
+    outline: none;
+}
+
+.input-group input:focus {
+    background: var(--neon-green-dim);
+}
+
+.neon-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 12px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    transition: all 0.3s;
+    margin-top: 10px;
+}
+
+.neon-btn:hover {
+    background: var(--neon-green);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--neon-green);
+}
+
+.error-msg {
+    color: var(--error-color);
+    font-size: 0.7rem;
+    margin-top: 5px;
+}
+
+.auth-switch {
+    margin-top: 20px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.auth-switch a {
+    color: var(--neon-green);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--neon-green);
+}
+
+/* Glitch Effect */
+.glitch {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+                 -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+                 0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+    animation: glitch 500ms infinite;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+    14% { text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75), -0.05em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75); }
+    15% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); }
+    49% { text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75), 0.025em 0.025em 0 rgba(0, 255, 0, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75); }
+    50% { text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75); }
+    99% { text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75), 0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75); }
+    100% { text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75), -0.025em -0.025em 0 rgba(0, 255, 0, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75); }
+}
+
+/* Home Page Layout */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.top-bar {
+    padding: 15px;
+    border-bottom: 1px solid var(--neon-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    border-top: 1px solid var(--neon-green);
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.nav-item {
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.nav-item:hover {
+    text-shadow: 0 0 10px var(--neon-green);
+}
+
+.friend-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.friend-item:hover {
+    border: 1px solid var(--neon-green);
+    background: var(--neon-green-dim);
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--neon-green);
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: auto;
+}
+
+.status-online { background: var(--neon-green); box-shadow: 0 0 5px var(--neon-green); }
+.status-offline { background: #555; }
+
+/* Chat Window */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-header {
+    padding: 15px;
+    border-bottom: 1px solid var(--neon-green);
+    display: flex;
+    align-items: center;
+}
+
+.messages-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-bubble {
+    max-width: 70%;
+    padding: 10px 15px;
+    border: 1px solid var(--neon-green);
+    position: relative;
+    word-wrap: break-word;
+}
+
+.message-sent {
+    align-self: flex-end;
+    background: var(--neon-green-dim);
+}
+
+.message-received {
+    align-self: flex-start;
+}
+
+.chat-input-area {
+    padding: 15px;
+    border-top: 1px solid var(--neon-green);
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    background: transparent;
+    border: 1px solid var(--neon-green);
+    color: var(--neon-green);
+    padding: 10px;
+    outline: none;
+}
+
+.message-bubble audio {
+    filter: invert(1);
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 255, 65, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(0, 255, 65, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 255, 65, 0); }
+}
+
+.voice-playing {
+    animation: pulse 1.5s infinite;
+}

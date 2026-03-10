@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Hacker Messenger</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="hacker-theme">
+    <div class="app-container">
+        <header class="top-bar">
+            <button class="icon-btn" onclick="location.href='/index.html'"><i data-lucide="arrow-left"></i></button>
+            <div class="neon-text">NOTIFICATIONS</div>
+            <div></div>
+        </header>
+
+        <main class="main-content" id="notifList">
+            <!-- Notifications will be loaded here -->
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-item" onclick="location.href='/profile.html'"><i data-lucide="user"></i><br>PROFILE</div>
+            <div class="nav-item" onclick="location.href='/index.html'"><i data-lucide="home"></i><br>HOME</div>
+            <div class="nav-item" onclick="location.href='/notifications.html'"><i data-lucide="bell"></i><br>NOTIFS</div>
+            <div class="nav-item" onclick="logout()"><i data-lucide="log-out"></i><br>LOGOUT</div>
+        </nav>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/notifications.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

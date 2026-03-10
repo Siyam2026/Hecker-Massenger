@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Hacker Messenger</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="hacker-theme">
+    <div class="app-container">
+        <header class="top-bar">
+            <button class="icon-btn" onclick="location.href='/index.html'"><i data-lucide="arrow-left"></i></button>
+            <div class="neon-text">IDENTITY_PROFILE</div>
+            <div></div>
+        </header>
+
+        <main class="main-content" style="padding: 30px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <img id="profilePicPreview" src="" class="profile-pic" style="width: 120px; height: 120px;">
+                <div id="profileUsername" class="neon-text" style="margin-top: 10px;">@USERNAME</div>
+            </div>
+
+            <form id="profileForm" class="auth-form" style="max-width: 100%; border: none; box-shadow: none; padding: 0;">
+                <div class="input-group">
+                    <label>DISPLAY_NAME</label>
+                    <input type="text" id="profileName" required>
+                </div>
+                <div class="input-group">
+                    <label>AVATAR_URL</label>
+                    <input type="text" id="profilePicUrl">
+                </div>
+                <div class="input-group">
+                    <label>NEW_ACCESS_CODE</label>
+                    <input type="password" id="profilePassword" placeholder="Leave blank to keep current">
+                </div>
+                <button type="submit" class="neon-btn">UPDATE_IDENTITY</button>
+            </form>
+        </main>
+
+        <nav class="bottom-nav">
+            <div class="nav-item" onclick="location.href='/profile.html'"><i data-lucide="user"></i><br>PROFILE</div>
+            <div class="nav-item" onclick="location.href='/index.html'"><i data-lucide="home"></i><br>HOME</div>
+            <div class="nav-item" onclick="location.href='/notifications.html'"><i data-lucide="bell"></i><br>NOTIFS</div>
+            <div class="nav-item" onclick="logout()"><i data-lucide="log-out"></i><br>LOGOUT</div>
+        </nav>
+    </div>
+
+    <script src="/js/auth.js"></script>
+    <script src="/js/profile.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

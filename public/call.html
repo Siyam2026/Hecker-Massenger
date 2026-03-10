@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call - Hacker Messenger</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="hacker-theme">
+    <div class="auth-container" id="callContainer">
+        <div class="glitch-wrapper">
+            <h1 class="glitch" id="callStatus">INCOMING_CALL...</h1>
+        </div>
+        <div id="callerInfo" style="margin: 20px 0; text-align: center;">
+            <img id="callerPic" src="" class="profile-pic" style="width: 100px; height: 100px;">
+            <div id="callerName" class="neon-text" style="margin-top: 10px;">UNKNOWN_USER</div>
+        </div>
+        <div class="call-actions" style="display: flex; gap: 20px;">
+            <button id="acceptCall" class="neon-btn" style="background: var(--neon-green); color: var(--bg-color);">ACCEPT</button>
+            <button id="rejectCall" class="neon-btn" style="border-color: var(--error-color); color: var(--error-color);">REJECT</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/simple-peer@9.11.1/simplepeer.min.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/call.js"></script>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
