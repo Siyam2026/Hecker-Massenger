@@ -30,10 +30,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/hacker_messenger';
+const MONGODB_URI = process.env.MONGODB_URI;
+
 mongoose.connect(MONGODB_URI)
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('MongoDB connection error:', err));
+.then(() => {
+    console.log("MongoDB connected");
+})
+.catch((err) => {
+    console.error("MongoDB connection error:", err);
+});
 
 import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
